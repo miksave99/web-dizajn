@@ -1,0 +1,16 @@
+.about-us img {
+    width: 100%;
+}
+
+.about-us-title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.about-us-title h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #2b5070;
+}

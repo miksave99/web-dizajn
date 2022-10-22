@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Contact</title>
+
+        <!-- Icon -->
+        <link rel="icon" href="slike/logo.png" type="image/gif" sizes="16x16">
+
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link href="css/glavni.css"  rel="stylesheet">
+        <link href="css/kontakt.css" rel="stylesheet">
+    
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Font-awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <section class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 logo">
+                        <a href="indexen.html">
+                            <img src="slike/logo.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="col">
+
+                    </div>  
+
+                    <div class="col language">
+                        <div class="language-icon">
+                            <a href="kontakt.html">
+                                <img src="./slike/jezici/sr.png" alt="sr">
+                            </a>
+                        </div>
+                        
+                        <div class="language-icon active">
+                            <a href="contact.html">
+                                <img src="./slike/jezici/en.png" alt="en">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / Header -->
+
+        <!-- ======= Menu ======= -->
+        <section class="navigation-menu">
+            <nav class="navbar navbar-expand-md">
+                <div class="container">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item text-center">
+                            <a class="link" href="indexen.html">Home</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="link" href="aboutus.html">About us</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="link" href="phones.html">Phones</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="link" href="equipment.html">Equipment</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="link" href="service.html">Service</a>
+                        </li>
+
+                        <li class="nav-item active text-center">
+                            <a class="link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>    
+            </nav>
+        </section>
+        <!-- / Menu -->
+
+        <!-- ======= Contact form ======= -->
+        <section class="contact">
+            <div class="container">
+                <div class="contact-title mt-5">
+                    <h2>Contact</h2>
+                </div>
+
+                <div class="col-lg-12" id="contact-form">
+                    <div class="row mt-3">
+                        <!-- Form -->
+                        <div class="col-lg-6 d-flex">
+                            <form class="contact-form" onsubmit="validateForm(event)" method="post" class="form" name="form" id="form">
+                                <div class="form-group row">
+                                    <!-- First Name -->
+                                    <div class="col-md-6">
+                                        <label for="name">First name:</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your first name...">
+                                        <span class="form-description">First uppercase letter and minimum 3 characters</span>
+                                        <span class="text-danger" id="error-name">Incorrectly entered first name</span>
+                                    </div>
+
+                                    <!-- Last Name -->
+                                    <div class="col-md-6">
+                                        <label for="lastname">Last name:</label>
+                                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Your last name...">
+                                        <span class="form-description">First uppercase letter and minimum 3 characters</span>
+                                        <span class="text-danger" id="error-last-name">Incorrectly entered last name</span>
+                                    </div>
+                                </div>
+    
+                                <!-- Email -->
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email...">
+                                        <span class="form-description">Must be in format example@domain.com</span>
+                                        <span class="text-danger" id="error-email">Incorrectly entered email</span>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label for="message">Message:</label>
+                                        <textarea name="c_message" class="form-control" id="message" name="message" cols="30" rows="7" placeholder="Enter message..."></textarea>
+                                        <span class="form-description">Minimum 1 character</span>
+                                        <span class="text-danger" id="error-message">Incorrectly entered message</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Button for send -->
+                                <div class="form-group row">
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                    </div>
+                                </div>
+
+                                <!-- Alert success -->
+                                <div class="alert alert-success" id="success" role="alert">
+                                    <span>Message was successfully sent</span>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="col-lg-6 d-flex">
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.413937762337!2d20.61418151571425!3d43.28465238420147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756315a0790c16d%3A0x16dd2dcd1175453f!2sStara%20Strugara!5e0!3m2!1ssr!2srs!4v1652803414274!5m2!1ssr!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-lg-4 d-flex">
+                            <div class="contact-box">
+                                <i class="fa fa-map-marker"></i>
+                                <h4>Address:</h4>
+                                <p>Stara strugara, B-IV/13</p>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 d-flex">
+                            <div class="contact-box">
+                                <i class="fa fa-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>mihajloveljkovic1999@gmail.com</p>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 d-flex">
+                            <div class="contact-box">
+                                <i class="fa fa-phone"></i>
+                                <h4>Call Us:</h4>
+                                <p>+381 66 405 676</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / Contact form -->
+
+        <!-- ======= Footer ======= -->
+        <section class="footer">
+            <div class="container">
+                <div class="copyright">
+                    <a href="vueen.html"> &copy; 2022, Mihajlo Veljković</a>
+                </div>
+            </div>
+        </section>
+        <!-- / Footer -->
+    
+        <!-- ======= JavaScript ======= -->
+        <script src="js/kontakt.js"></script>
+        <!-- / JavaScript -->
+    </body>
+</html>
